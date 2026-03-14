@@ -1,0 +1,212 @@
+/* 
+
+01- TYPOGRAPHY SYSTEM
+
+
+-FONT Weights:
+Default:400
+Medium:500
+Semi-Bold:600
+Bold:700
+
+-Line Heights:
+Default:1
+Small: 1.05
+Medium: 1.2
+Paragraph: 1.6
+Large:1.8
+
+-letter spacing:
+minimum: -0.5px
+0.75px
+
+
+-FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    
+      
+
+02 COLORS
+
+-Primary:#e67e22
+-Tints:
+#fdf2e9
+#fae5d3
+-Shades:#cf711f
+#45260a;
+-Accents:
+-Greys: 
+#888
+#767676 (lightest gray)
+#6f6f6f (lightest gray allowed on #fdf2e9)
+#555
+#333
+
+05 SHADOWS
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+06 BORDER-RADIUS
+default:9px
+medium:11px
+
+07 WHITESPACE
+-spacing system (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+sources: Unsplash; uifaces
+*/
+
+/**************************/
+/* Components */
+/**************************/
+
+*:focus {
+  outline: none;
+  box-shadow: none 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #e67e22;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 9px;
+  font-size: 2rem;
+  /* button right padding big */
+  padding: 1.6rem 3.2rem;
+  font-weight: 600;
+
+  /* put transition on original state */
+  transition: all 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+}
+
+.btn--full:hover,
+.btn--active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  /* transparent */
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  color: #e67e22;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.section-feature {
+  padding: 9.6rem 0;
+}
+
+/* item occupy grid cell, ??? */
+.btn-form {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.2rem 3.2rem;
+  border-radius: 9px;
+  /* ???? */
+  align-self: end;
+  background-color: #45260a;
+  color: #fff;
+
+  transition: all 0.3s;
+}
+
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
+}

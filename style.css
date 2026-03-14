@@ -1,0 +1,766 @@
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+/* To set a specific width; and flexible with the viewpoint, when larger, max, small occupy */
+.hero {
+  /* lighter version to make background */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  /* to make it center */
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* image flexible, width - parent container */
+.hero-img {
+  width: 100%;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-teritary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-teritary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  color: #cf711f;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+/* margin right?， helper class add to different object */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6em;
+}
+
+.delivered-imgs {
+  display: flex;
+  /* overlap */
+  gap: -0.5rem;
+}
+/* width height cannot be inherited */
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+
+  border-radius: 50%;
+}
+
+/* cancel the last margin-right  */
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.slogan {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.slogan span {
+  color: #cf711f;
+}
+
+/**************************/
+/* HEADER */
+/**************************/
+
+.logo {
+  height: 2.4rem;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  background-color: #fdf2e9;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-section:link,
+:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.nav-section:hover,
+:active {
+  color: #cf711f;
+}
+
+.nav-section.nav-cta:link,
+.nav-section.nav-cta:visited {
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+  border-radius: 9px;
+}
+
+.nav-section.nav-cta:hover,
+.nav-section.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/**************************/
+/* Sticky navigation bar */
+/**************************/
+.sticky .hero-header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  width: 100%;
+  height: 8rem;
+  z-index: 9999;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.06);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+/**************************/
+/* Mobile application SECTION */
+/**************************/
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  color: none;
+  /* hidden */
+  /* hidden */
+  display: none;
+}
+
+/* 在nav-open下的btn-mobile-nav */
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  /* select by attribute */
+  display: none;
+}
+
+/**************************/
+/* FEATURE IN SECTION */
+/**************************/
+
+.feature-logo-box {
+  display: flex;
+  gap: 3.2rem;
+  justify-content: space-around;
+}
+
+.feature-img {
+  height: 3.2rem;
+  filter: brightness(0) opacity(0.5);
+}
+
+.section-feature {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.feature-title {
+  color: #888;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.75px;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+/**************************/
+/* HOW IT WORK SECTION */
+/**************************/
+
+/* container对齐 */
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.step-img-box::before,
+.step-img-box::after {
+  display: block;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.step-img-box:hover::before,
+.step-img-box:hover::after {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.step-img {
+  width: 35%;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  color: #ddd;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/**************************/
+/* Meals SECTION */
+/**************************/
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translate(0, -1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icons {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-attribute span {
+  color: #333;
+}
+
+.tag {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 100px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.tag-vegetarian {
+  background-color: #51cf66;
+}
+
+.tag-vegan {
+  background-color: #82c91e;
+}
+
+.tag-paleo {
+  background-color: #ffe066;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2rem;
+}
+
+.list-item span {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.list-icon {
+  color: #e67e22;
+  font-size: 2.4rem;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/**************************/
+/* Testimonial SECTION */
+/**************************/
+.section-testimonial {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonial-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.gallery {
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/**************************/
+/* Meals SECTION */
+/**************************/
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border: 2px solid #fdf2e9;
+  border-radius: 11px;
+  width: 75%;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-text {
+  color: #6f6f6f;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-weight: 700;
+  font-size: 6.2rem;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  margin-right: 0.8rem;
+}
+
+.plan-sign-up {
+  margin-top: 3.2rem;
+  text-align: center;
+}
+
+.pricing-plan-starter {
+  padding: 4.6rem;
+  justify-self: end;
+}
+
+.pricing-plan-complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan-complete::after {
+  content: "BEST VALUE";
+  position: absolute;
+  top: 7%;
+  right: -18%;
+  text-transform: uppercase;
+  background-color: #ffe066;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+/**************************/
+/* Feature SECTION */
+/**************************/
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.feature-icon {
+  color: #cf711f;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
+  background-color: #fae5d3;
+  border-radius: 50%;
+  padding: 1.6rem;
+}
+
+.feature-header {
+  color: #333;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+  text-transform: none;
+}
+
+/* 上宽下窄 */
+/* select the grid that not the last child of its parent */
+/* override the default, use helper class */
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+/* 空间分布三分之二 */
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background: linear-gradient(to right bottom, #eb984e, #e67e22);
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  column-gap: 4.8rem;
+}
+
+/* multiple ingredient */
+.cta-img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 150, 76, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url(img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-text-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  /* good color contrast */
+  margin-bottom: 4.8rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  color: inherit;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* pseudo element not existed */
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta:focus {
+  outline: none;
+  box-shadow: 0 0 0 rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER SECTION */
+/**************************/
+
+footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid-footer {
+  /* adjust spacing */
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.social-link {
+  display: flex;
+  list-style: none;
+  gap: 2.4rem;
+}
+
+.social-logo {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.footer-logo {
+  display: block;
+  /* can use margin-bottom because a is inline */
+  margin-bottom: 3.2rem;
+}
+
+.footer-heading {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+/* 自动占据底部、右部...转换
+CSS 规范明确规定：在 Flex 容器的主轴方向上，auto 边距会吸收该方向上所有剩余的自由空间。 */
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
+}
